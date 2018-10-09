@@ -1,0 +1,21 @@
+﻿<Window x:Class="Examen2doParcial.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Examen2doParcial"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500">
+    <StackPanel>
+        <TextBlock>1.Informacion Personal > 2. Contacto > 3. Información de Pago</TextBlock>
+
+        <local:ControlInformacionPersonal x:Name="controlInformacionPersonal" Visibility="Visible"></local:ControlInformacionPersonal>
+        <local:ControlContacto x:Name="controlContacto" Visibility="Collapsed"></local:ControlContacto>
+        <local:ControlInformaciondePago x:Name="controlInformaciondePago" Visibility="Collapsed"></local:ControlInformaciondePago>
+
+        <Button Name="btnSiguiente" Click="btnSiguiente_Click" Visibility="Visible">Siguiente</Button>
+        <Button Name="btnFinalizar" Click="btnFinalizar_Click" Visibility="Collapsed">Finalizar</Button>
+        <TextBlock Name="txtAlerta1" Visibility="Collapsed">Es necesario llenar todos los campos</TextBlock>
+        <TextBlock Name="txtAlerta2" Visibility="Collapsed">Es necesario que el numero de tarjeta sean 16 digitos</TextBlock>
+    </StackPanel>
+</Window>
